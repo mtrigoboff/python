@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# unnecessary files
+/object_oriented/motif2text_test.txt
+

@@ -23,8 +23,10 @@
   <ItemGroup>
     <Compile Include="bridge_of_death.py" />
     <Compile Include="coord_input_colors.py" />
+    <Compile Include="dictionary.py" />
     <Compile Include="functions.py" />
     <Compile Include="global.py" />
+    <Compile Include="hashtable.py" />
     <Compile Include="if_stmt.py" />
     <Compile Include="if_stmt_debug.py" />
     <Compile Include="lists.py" />

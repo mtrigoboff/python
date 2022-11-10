@@ -75,7 +75,7 @@ def run(readSQLfile, writeSQLfile):
 
 	conn.close()
 
-# run(False, False)
+run(False, False)
 # run(False, True)
-run(True, False)
+# run(True, False)
 # run(True, True)

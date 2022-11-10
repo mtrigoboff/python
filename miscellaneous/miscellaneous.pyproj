@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cbbea547-c05b-4916-bf70-c615bbaf7f07</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>n_key_encryption.py</StartupFile>
+    <StartupFile>covid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
     <Compile Include="caesar_cipher.py" />
     <Compile Include="cmd_line_ui.py" />
     <Compile Include="cmd_line_ui_dict.py" />
+    <Compile Include="covid.py" />
     <Compile Include="fibonacci.py" />
     <Compile Include="n_key_encryption.py" />
   </ItemGroup>

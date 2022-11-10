@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>168c674a-75e6-4cf5-9acd-3f7ad2cfb1ef</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sqlite_demo.py</StartupFile>
+    <StartupFile>obj_oriented.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,8 @@
     <Compile Include="cmd_line_ui_class.py" />
     <Compile Include="mcburgers.py" />
     <Compile Include="motif2text.py" />
+    <Compile Include="obj_oriented.py" />
+    <Compile Include="procedural.py" />
     <Compile Include="sqlite_demo.py" />
     <Compile Include="tic_tac_toe.py" />
     <Compile Include="tic_tac_toe_cmd_line.py" />

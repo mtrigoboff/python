@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a4218cbd-f387-4a25-a1e9-1ae637d6f205</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>global.py</StartupFile>
+    <StartupFile>slicing.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,10 +29,12 @@
     <Compile Include="if_stmt_debug.py" />
     <Compile Include="lists.py" />
     <Compile Include="list_comprehension.py" />
+    <Compile Include="loops.py" />
     <Compile Include="numeric_input_no_validation.py" />
     <Compile Include="numeric_input_validation.py" />
     <Compile Include="pdb_demo.py" />
     <Compile Include="recursion.py" />
+    <Compile Include="slicing.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

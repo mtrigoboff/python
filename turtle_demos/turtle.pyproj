@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3e6b8583-49b5-4e86-8908-3697f5ceed99</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>write.py</StartupFile>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>tree.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>turtle_demos</Name>
+    <Name>turtle</Name>
     <RootNamespace>turtle_demos</RootNamespace>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
@@ -27,6 +28,7 @@
     <Compile Include="coord_input_colors.py" />
     <Compile Include="heading_test.py" />
     <Compile Include="shape1.py" />
+    <Compile Include="tree.py" />
     <Compile Include="turtle_chase.py" />
     <Compile Include="write.py" />
   </ItemGroup>

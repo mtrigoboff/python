@@ -58,7 +58,7 @@ class Snake(Animal):
 	def __str__(self):
 		return f'species:{self.species()}, sound:{self.sound()}, nFeet:{self.nFeet()}, {super().__str__()}'
 
-animals = (Bear(), Bird(), Snake())
+animals = (Bear(), Bird(), Snake(), Animal())
 
 def main():
 	print('Object Oriented')

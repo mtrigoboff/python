@@ -130,16 +130,7 @@ def createTextFn():
 	sys.stdout = realStdOut
 
 def helpFn():
-	helpFileName = 'motif2textHelp.pdf'
-	if os.name == 'mac':
-		# this section adapted from code written by Vikas Sharma
-		if getattr(sys, 'frozen', False):			# application is frozen
-			datadir = os.path.join(os.path.dirname(sys.executable), '..', 'Resources')
-		else:										# application is not frozen
-			datadir = os.path.join(os.path.dirname(__file__), '..', 'Resources')
-		helpFilePath = os.path.join(datadir, helpFileName)
-	else:										# Windows, Linux, etc
-		helpFilePath = helpFileName
+	helpFilePath = os.path.join('motif2text', 'motif2textHelp.pdf')
 	launchFile(helpFilePath)
 
 def checkBoxKeyboardShortcutFn(ch):

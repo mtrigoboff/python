@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>168c674a-75e6-4cf5-9acd-3f7ad2cfb1ef</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>mcburgers.py</StartupFile>
+    <StartupFile>tic_tac_toe\tic_tac_toe_cmd_line.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,17 +23,26 @@
   <ItemGroup>
     <Compile Include="cmd_line_ui_class.py" />
     <Compile Include="mcburgers.py" />
-    <Compile Include="motif2text.py" />
+    <Compile Include="motif2text\motif2text.py" />
     <Compile Include="obj_oriented.py" />
     <Compile Include="procedural.py" />
-    <Compile Include="sqlite_demo.py" />
-    <Compile Include="tic_tac_toe.py" />
-    <Compile Include="tic_tac_toe_cmd_line.py" />
-    <Compile Include="tic_tac_toe_game.py" />
-    <Compile Include="tic_tac_toe_turtle.py" />
+    <Compile Include="sqlite3_demo\sqlite3_demo.py" />
+    <Compile Include="tic_tac_toe\tic_tac_toe.py" />
+    <Compile Include="tic_tac_toe\tic_tac_toe_cmd_line.py" />
+    <Compile Include="tic_tac_toe\tic_tac_toe_game.py" />
+    <Compile Include="tic_tac_toe\tic_tac_toe_turtle.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="motif2text_test" />
+    <Content Include="motif2text\motif2text.ini" />
+    <Content Include="motif2text\motif2textHelp.pdf" />
+    <Content Include="motif2text\motif2text_test" />
+    <Content Include="sqlite3_demo\db.sqlite3" />
+    <Content Include="sqlite3_demo\students.sqldb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="motif2text\" />
+    <Folder Include="sqlite3_demo\" />
+    <Folder Include="tic_tac_toe\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

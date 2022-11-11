@@ -12,7 +12,7 @@ def print_play_keys():                              # print chart of play keys
 def get_move(game):                                 # get next move for X from user
     while True:
         move = int(input('# '))
-        if move < 1 or move > 9:
+        if not 1 <= move <= 9:
             raise Exception(f'user input of {move} is not in range [1 .. 9]')
         break
     return move
@@ -33,6 +33,7 @@ def run():
                 print()
                 if msg is not None:
                     print(msg)
+                    print()
                     return
             except Exception as e:
                 print(e)

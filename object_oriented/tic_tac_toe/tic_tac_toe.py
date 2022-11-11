@@ -60,7 +60,7 @@ def get_move(board):                                        # get next move for 
     while True:
         try:
             move = int(input('# '))
-            if move < 1 or move > 9:
+            if not 1 <= move <= 9:
                 raise Exception(f'user input of {move} is not in range [1 .. 9]')
             elif board.square(move) != ' ':
                 raise Exception(f'square {move} is already occupied')
@@ -76,6 +76,7 @@ def end_if_win(board, player):                              # print board and ex
         board.print()
         print()
         print(f'{player} wins!')
+        print()
         sys.exit(0)
 
 def end_if_board_full(board):                               # print board and exit if board is full
@@ -83,6 +84,7 @@ def end_if_board_full(board):                               # print board and ex
         board.print()
         print()
         print('game over - no win')
+        print()
         sys.exit(0)
 
 def run():

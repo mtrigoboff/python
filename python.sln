@@ -11,6 +11,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "miscellaneous", "miscellane
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "object_oriented", "object_oriented\object_oriented.pyproj", "{168C674A-75E6-4CF5-9ACD-3F7AD2CFB1EF}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "_temp", "_temp\_temp.pyproj", "{AB27B2E0-ED8B-4D54-9747-A246182AB652}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "csv_file", "csv_file\csv_file.pyproj", "{0D9F7C8C-1007-41E5-9D4D-4B6808087632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{CBBEA547-C05B-4916-BF70-C615BBAF7F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168C674A-75E6-4CF5-9ACD-3F7AD2CFB1EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{168C674A-75E6-4CF5-9ACD-3F7AD2CFB1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB27B2E0-ED8B-4D54-9747-A246182AB652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB27B2E0-ED8B-4D54-9747-A246182AB652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9F7C8C-1007-41E5-9D4D-4B6808087632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9F7C8C-1007-41E5-9D4D-4B6808087632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -363,8 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # unnecessary files
-/_temp
+/aaa_temp
 *.csv
 /object_oriented/motif2text_test.txt
-
-/aaa_temp/aaa_temp.pyproj

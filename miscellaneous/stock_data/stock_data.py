@@ -1,6 +1,8 @@
+import os.path
+
 data = {'AAPL' : {'price' : 500, 'shares' : 10000}, 'IBM' : {'price' : 200, 'shares' : 20000}}
 
-csv_file = open('data.csv', 'w')
+csv_file = open(os.path.join('stock_data', 'stock_data.csv'), 'w')
 
 # column headers
 line = 'stock,'

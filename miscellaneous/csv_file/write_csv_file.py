@@ -1,10 +1,15 @@
+import os.path
+
 data = [[1, 2, 3],
 		[4, 5, 6]]
 
-csv_file = open('data.csv', 'w')
+csv_file = open(os.path.join('csv_file', 'data.csv'), 'w')
 for row in data:
+
+	# 'pythonic' code
 	csv_file.write(''.join([str(item) + ',' for item in row])[:-1] + '\n')
 
+	# more straightforward (but probably slower) code
 	'''
 	line = ''
 

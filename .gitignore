@@ -364,6 +364,6 @@ FodyWeavers.xsd
 
 # unnecessary files
 /_temp
-/csv_file/data.csv
+*.csv
 /object_oriented/motif2text_test.txt
 

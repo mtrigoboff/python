@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cbbea547-c05b-4916-bf70-c615bbaf7f07</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>hash_stats\hash_stats.py</StartupFile>
+    <StartupFile>stock_data\stock_data.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

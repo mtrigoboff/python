@@ -41,12 +41,12 @@ def write_csv_file(stock_symbols, file_name, csv_data):
 
 	csv_file.close()
 
-def run(interval_secs, file_name):
+def run(data_requests, interval_secs, file_name):
 	
 	stock_symbols = ['AAPL', 'IBM']				# list of stock symbols
 	csv_data = dict([[stock_symbol, []] for stock_symbol in stock_symbols])
 
-	for rep in range(0, 3):						# loop runs 3 times
+	for rep in range(0, data_requests):			# loop runs 3 times
 		stock_data = get_stock_data(stock_symbols)
 		for stock_symbol in stock_symbols:
 			csv_data[stock_symbol].append(stock_data[stock_symbol])
@@ -54,5 +54,6 @@ def run(interval_secs, file_name):
 
 	write_csv_file(stock_symbols, file_name, csv_data)
 
-run(1, 'stock_data.csv')
+# fill in your desired values below
+run(4, 1, 'stock_data.csv')
 

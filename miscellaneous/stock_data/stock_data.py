@@ -5,19 +5,19 @@ from time import sleep
 import copy			# only needed for fake data production
 
 # fake data for testing purposes
-row_data = {'AAPL' : {'price' : 500, 'shares' : 10000}, 'IBM' : {'price' : 200, 'shares' : 20000}}
+fake_data = {'AAPL' : {'price' : 500, 'shares' : 10000}, 'IBM' : {'price' : 200, 'shares' : 20000}}
 
 def get_stock_data(stocks):
 
 	# replace with code that actually gets stock data from brokerage
 	
 	# generate different fake data each time
-	row_data['AAPL']['price'] += 1
-	row_data['AAPL']['shares'] += 10
-	row_data['IBM']['price'] += 1
-	row_data['IBM']['shares'] += 10
+	fake_data['AAPL']['price'] += 1
+	fake_data['AAPL']['shares'] += 10
+	fake_data['IBM']['price'] += 1
+	fake_data['IBM']['shares'] += 10
 
-	return copy.deepcopy(row_data)
+	return copy.deepcopy(fake_data)
 
 def write_csv_file(stock_symbols, file_name, csv_data):
 	

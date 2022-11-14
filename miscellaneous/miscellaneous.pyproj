@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cbbea547-c05b-4916-bf70-c615bbaf7f07</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>stock_data\stock_data.py</StartupFile>
+    <StartupFile>hash_stats\hash_stats.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,11 +27,13 @@
     <Compile Include="covid.py" />
     <Compile Include="csv_file\write_csv_file.py" />
     <Compile Include="fibonacci.py" />
+    <Compile Include="hash_stats\hash_stats.py" />
     <Compile Include="n_key_encryption.py" />
     <Compile Include="stock_data\stock_data.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="csv_file\" />
+    <Folder Include="hash_stats\" />
     <Folder Include="stock_data\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

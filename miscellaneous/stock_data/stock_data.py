@@ -41,7 +41,7 @@ def write_csv_file(stock_symbols, file_name, csv_data):
 
 	csv_file.close()
 
-def run(data_requests, interval_secs, file_name):
+def run(data_requests, sleep_secs, file_name):
 	
 	stock_symbols = ['AAPL', 'IBM']				# list of stock symbols
 	csv_data = dict([[stock_symbol, []] for stock_symbol in stock_symbols])
@@ -50,10 +50,11 @@ def run(data_requests, interval_secs, file_name):
 		stock_data = get_stock_data(stock_symbols)
 		for stock_symbol in stock_symbols:
 			csv_data[stock_symbol].append(stock_data[stock_symbol])
-		sleep(interval_secs)					# sleep for designated seconds
+		sleep(sleep_secs)						# sleep for designated seconds
 
 	write_csv_file(stock_symbols, file_name, csv_data)
 
-# fill in your desired values below
-run(4, 1, 'stock_data.csv')
-
+# allow to be run from the command line like this: python stock_data.py
+if __name__ == '__main__':
+	# fill in your desired values below
+	run(4, 1, 'stock_data.csv')

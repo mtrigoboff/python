@@ -4,22 +4,24 @@ import os.path, sys
 
 N_BINS = 128
 
-def word_start_end_chars(words, fileNameRoot):
+'''
+def word_start_end_chars(words, file_name_root):
 	# collect stats on word start and end chars
 	words_with_start_char = [0] * 26
 	words_with_end_char =   [0] * 26
 	for word in words:
-		startIndex = ord(word[0]) - ord('a')
-		endIndex = ord(word[len(word) - 1]) - ord('a')
-		if startIndex < 0 or startIndex > 25 or endIndex < 0 or endIndex > 25:
+		start_index = ord(word[0]) - ord('a')
+		end_index = ord(word[-1:]) - ord('a')
+		if start_index < 0 or start_index > 25 or end_index < 0 or end_index > 25:
 			continue
-		words_with_start_char[startIndex] += 1
-		words_with_end_char[endIndex] += 1
-	out_file = open(fileNameRoot + '.wordchars.csv', 'w')
+		words_with_start_char[start_index] += 1
+		words_with_end_char[end_index] += 1
+	out_file = open(file_name_root + '.wordchars.csv', 'w')
 	for i in range(0, 25):
 		print(f'{chr(i + ord("a"))},{words_with_start_char[i]},{words_with_end_char[i]}', file=out_file)
 	out_file.close()
-	
+'''
+
 def hash_sum(word):
 	hash_code = 0
 	for ch in word:
@@ -40,7 +42,7 @@ def collect_bins(words, hashFn):
 		bins[hashFn(word) >> 25] += 1
 	return bins
 
-def main(fileName):
+def run(fileName):
 	fileNameRoot = os.path.splitext(fileName)[0]
 
 	# collect words in set
@@ -72,5 +74,5 @@ def main(fileName):
 
 # when invoked from the command line
 if __name__ == '__main__':
-	main(sys.argv[1])
+	run(os.path.join('hash_stats', 'tomsawyer.txt'))
 #	test(sys.argv[1])

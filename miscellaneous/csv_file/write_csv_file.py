@@ -7,7 +7,7 @@ csv_file = open(os.path.join('csv_file', 'data.csv'), 'w')
 for row in data:
 
 	# 'pythonic' code
-	csv_file.write(''.join([str(item) + ',' for item in row])[:-1] + '\n')
+	print(''.join([str(item) + ',' for item in row])[:-1], file=csv_file)
 
 	# more straightforward (but probably slower) code
 	'''
@@ -15,7 +15,7 @@ for row in data:
 
 	for item in row:
 		line += str(item) + ','
-	csv_file.write(line[:-1] + '\n')
+	print(line[:-1], file=csv_file)
 	'''
 
 csv_file.close()

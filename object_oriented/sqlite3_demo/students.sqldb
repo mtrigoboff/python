@@ -1,7 +1,0 @@
-BEGIN TRANSACTION;
-CREATE TABLE students (name TEXT, g_number TEXT, gpa REAL);
-INSERT INTO "students" VALUES('Bob','G123456789',3.02);
-INSERT INTO "students" VALUES('Alice','G234567890',2.93);
-INSERT INTO "students" VALUES('Perry','G345678901',3.95);
-INSERT INTO "students" VALUES('Charlie','G456789012',1.25);
-COMMIT;

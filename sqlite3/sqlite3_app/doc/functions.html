@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pcc.gui Package API &#8212; pcc.gui  documentation</title>
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pcc.gui Package Tutorial" href="tutorial.html" />
+    <link rel="shortcut icon" type="image/png" href="_static/pcc_16.png" />
+    
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+     
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="pcc.gui Package Tutorial"
+             accesskey="P">previous</a> |</li>
+    <li><img src="_static/pcc_16.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.pcc.edu/">PCC</a> &#187;</li>
+    
+    <a href="index.html">pcc.gui  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pcc.gui.window">
+<span id="pcc-gui-package-api"></span><span id="pcc-gui"></span><h1><code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package API<a class="headerlink" href="#module-pcc.gui.window" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pcc.gui.window.newWindow">
+<code class="descclassname">pcc.gui.window.</code><code class="descname">newWindow</code><span class="sig-paren">(</span><em>name</em>, <em>keypressFn=None</em>, <em>updateFn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.newWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new window object with specified <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">keypressFn</span></code>, and <code class="docutils literal notranslate"><span class="pre">updateFn</span></code>.
+The second and third arguments are optional. See <a class="reference internal" href="tutorial.html#wn-functions"><span class="std std-ref">Window Functions</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – window name</p></li>
+<li><p><strong>keypressFn</strong> (<em>Python function</em>) – keypress handler (see <a class="reference internal" href="tutorial.html#wn-functions"><span class="std std-ref">Window Functions</span></a>)</p></li>
+<li><p><strong>updateFn</strong> (<em>Python function</em>) – updates the user interface state (see <a class="reference internal" href="tutorial.html#wn-functions"><span class="std std-ref">Window Functions</span></a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">pcc.gui.Window</span></code> instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="pcc.gui.window.Window">
+<em class="property">class </em><code class="descclassname">pcc.gui.window.</code><code class="descname">Window</code><span class="sig-paren">(</span><em>title</em>, <em>keyPressFn=None</em>, <em>updateFn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Python class that creates a window on the screen which can be populated
+with graphical user interface items like text fields and buttons.</p>
+<dl class="method">
+<dt id="pcc.gui.window.Window.setPosn">
+<code class="descname">setPosn</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.setPosn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the position of the window on the screen. The <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> arguments specify
+the position of the top-left corner of the window. The top-left corner of
+the screen is <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">==</span> <span class="pre">0</span></code>. Larger values of <code class="docutils literal notranslate"><span class="pre">x</span></code> are to the <em>right</em>.
+Larger values of <code class="docutils literal notranslate"><span class="pre">y</span></code> are <em>lower</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – x coordinate of top-left corner of window</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – y coordinate of top-left corner of window</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.setSize">
+<code class="descname">setSize</code><span class="sig-paren">(</span><em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.setSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the size of the window on the screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<em>int</em>) – width of the window</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – heightof the window</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.setResizable">
+<code class="descname">setResizable</code><span class="sig-paren">(</span><em>widthResizable</em>, <em>heightResizable</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.setResizable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the width and/or the height of the window resizable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widthResizable</strong> (<em>Boolean</em>) – make the width of the window resizable</p></li>
+<li><p><strong>heightResizable</strong> (<em>Boolean</em>) – make the height of the window resizable</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.addButton">
+<code class="descname">addButton</code><span class="sig-paren">(</span><em>name</em>, <em>btnClickFn</em>, <em>sameRow=False</em>, <em>enabled=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.addButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a button to the window. Specify <code class="docutils literal notranslate"><span class="pre">sameRow=True</span></code> to add the button
+to the same row as the previously added window item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – name of the button</p></li>
+<li><p><strong>btnClickFn</strong> (<em>fn</em><em>(</em><em>string</em><em>)</em>) – function to call when the button is clicked.
+The function argument will be the name of the button.</p></li>
+<li><p><strong>sameRow</strong> (<em>Boolean</em>) – whether to add the button to the current row or the next row</p></li>
+<li><p><strong>enabled</strong> (<em>Boolean</em>) – whether the button is enabled or disabled (grayed out)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.addTextField">
+<code class="descname">addTextField</code><span class="sig-paren">(</span><em>name</em>, <em>enabled=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.addTextField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a text field to the next row of the window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – name of the text field</p></li>
+<li><p><strong>enabled</strong> (<em>Boolean</em>) – whether the text field will accept user input</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.getValue">
+<code class="descname">getValue</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.getValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value of the named window item.
+Can cause a <code class="docutils literal notranslate"><span class="pre">NotImplentedError</span></code> for item types that do not contain a value (e.g. button).
+Can cause a <code class="docutils literal notranslate"><span class="pre">NoSuchItemError</span></code> if <code class="docutils literal notranslate"><span class="pre">name</span></code> is not the name of an item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – name of the window item</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>value of the item</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>depends on item type; string for text field</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.setValue">
+<code class="descname">setValue</code><span class="sig-paren">(</span><em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.setValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the named window item.
+Can cause a <code class="docutils literal notranslate"><span class="pre">NotImplentedError</span></code> for item types that do not contain a value (e.g. button).
+Can cause a <code class="docutils literal notranslate"><span class="pre">NoSuchItemError</span></code> if <code class="docutils literal notranslate"><span class="pre">name</span></code> is not the name of an item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – name of the window item</p></li>
+<li><p><strong>value</strong> (<em>depends on item type</em>) – value for the window item</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.setEnabled">
+<code class="descname">setEnabled</code><span class="sig-paren">(</span><em>name</em>, <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.setEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the enabled state of the named window item.
+For instance, a button could be grayed out and unresponsive or normal-looking and active.
+Can cause a <code class="docutils literal notranslate"><span class="pre">NotImplentedError</span></code> for item types that do not support enabled/disabled states.
+Can cause a <code class="docutils literal notranslate"><span class="pre">NoSuchItemError</span></code> if <code class="docutils literal notranslate"><span class="pre">name</span></code> is not the name of an item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – name of the window item</p></li>
+<li><p><strong>enabled</strong> (<em>Boolean</em>) – value for the window item</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.open">
+<code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pcc.gui.window.Window.focusReturnKey">
+<code class="descname">focusReturnKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcc.gui.window.Window.focusReturnKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call this from your <code class="docutils literal notranslate"><span class="pre">myKeypressFn(key)</span></code> function if you want the window item that currently has the focus to respond to the Return/Enter key. See <a class="reference internal" href="tutorial.html#focus-and-return-key"><span class="std std-ref">User Interface Item Focus and the Return/Enter Key</span></a> and <a class="reference internal" href="tutorial.html#wn-functions"><span class="std std-ref">Window Functions</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>nothing</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="previous chapter"><code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package Tutorial</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/functions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="pcc.gui Package Tutorial"
+             >previous</a> |</li>
+    <li><img src="_static/pcc_16.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.pcc.edu/">PCC</a> &#187;</li>
+    
+    <a href="index.html">pcc.gui  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html">Copyright</a> 2019, Michael Trigoboff.
+    <br />
+
+    Last updated on May 20, 2019.
+    
+    <br />
+
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.0.1.
+    </div>
+
+  </body>
+</html>

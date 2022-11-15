@@ -1,0 +1,7 @@
+.. _pcc.gui:
+
+``pcc.gui`` Package API
+=======================
+
+.. automodule:: pcc.gui.window
+   :members:

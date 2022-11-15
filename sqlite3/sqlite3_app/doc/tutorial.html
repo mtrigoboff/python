@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pcc.gui Package Tutorial &#8212; pcc.gui  documentation</title>
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pcc.gui Package API" href="functions.html" />
+    <link rel="prev" title="Table of Contents" href="index.html" />
+    <link rel="shortcut icon" type="image/png" href="_static/pcc_16.png" />
+    
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+     
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions.html" title="pcc.gui Package API"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Table of Contents"
+             accesskey="P">previous</a> |</li>
+    <li><img src="_static/pcc_16.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.pcc.edu/">PCC</a> &#187;</li>
+    
+    <a href="index.html">pcc.gui  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pcc-gui-package-tutorial">
+<span id="tutorial"></span><h1><code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package Tutorial<a class="headerlink" href="#pcc-gui-package-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference internal" href="functions.html#pcc-gui"><span class="std std-ref">pcc.gui Package API</span></a> enables you to build a graphical user interface app with Python.
+The code excerpts in this tutorial are from the <a class="reference internal" href="#sample-app"><span class="std std-ref">Sample App</span></a>.</p>
+<div class="section" id="import-the-pcc-gui-package">
+<h2>Import the <code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package<a class="headerlink" href="#import-the-pcc-gui-package" title="Permalink to this headline">¶</a></h2>
+<p>In order to use the package, you need to import it.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pcc.gui</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-pcc-gui-window">
+<h2>Create a <code class="docutils literal notranslate"><span class="pre">pcc.gui.Window</span></code><a class="headerlink" href="#create-a-pcc-gui-window" title="Permalink to this headline">¶</a></h2>
+<p>To create a window, call <a class="reference internal" href="functions.html#pcc.gui.window.newWindow" title="pcc.gui.window.newWindow"><code class="xref py py-func docutils literal notranslate"><span class="pre">newWindow()</span></code></a>.
+You should declare the the variable that holds the window global,
+so that other functions can use it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="n">wn</span>
+<span class="n">wn</span> <span class="o">=</span> <span class="n">pcc</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">newWindow</span><span class="p">(</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="n">myKeypressFn</span><span class="p">,</span> <span class="n">myUpdateFn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="window-functions">
+<span id="wn-functions"></span><h2>Window Functions<a class="headerlink" href="#window-functions" title="Permalink to this headline">¶</a></h2>
+<p>You can provide two functions when you call <a class="reference internal" href="functions.html#pcc.gui.window.newWindow" title="pcc.gui.window.newWindow"><code class="xref py py-func docutils literal notranslate"><span class="pre">newWindow()</span></code></a>, <code class="docutils literal notranslate"><span class="pre">keypressFn</span></code> and <code class="docutils literal notranslate"><span class="pre">updateFn</span></code>.
+You can supply one, both, or none of them, as you choose:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myKeypressFn</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="c1"># This gets called whenever your window is the current window and the user</span>
+    <span class="c1"># hits a key on the keyboard. The key argument will be a string like:</span>
+    <span class="c1"># &#39;Escape&#39;, &#39;Return&#39;, &#39;a&#39;, &#39;b&#39;, etc.</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">myUpdateFn</span><span class="p">():</span>
+    <span class="c1"># The system will call this function whenever it needs to update the state of the</span>
+    <span class="c1"># user interface (e.g. a button should be grayed out and inactive when the data it</span>
+    <span class="c1"># needs is not present). You can also call this function directly if you need to.</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="#sample-app"><span class="std std-ref">Sample App</span></a> for an example of this.</p>
+<p>If you are only supplying <code class="docutils literal notranslate"><span class="pre">updateFn</span></code>, use keyword argument syntax like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span> <span class="o">=</span> <span class="n">pcc</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">newWindow</span><span class="p">(</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="n">updateFn</span><span class="o">=</span><span class="n">myUpdateFn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-window-items">
+<h2>Add Window Items<a class="headerlink" href="#add-window-items" title="Permalink to this headline">¶</a></h2>
+<p>Add text fields and buttons to your window with <a class="reference internal" href="functions.html#pcc.gui.window.Window.addTextField" title="pcc.gui.window.Window.addTextField"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addTextField()</span></code></a> and <a class="reference internal" href="functions.html#pcc.gui.window.Window.addButton" title="pcc.gui.window.Window.addButton"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addButton()</span></code></a>.
+Note the use of <code class="docutils literal notranslate"><span class="pre">sameRow</span></code> to add the <code class="docutils literal notranslate"><span class="pre">Quit</span></code> button to the same row as the <code class="docutils literal notranslate"><span class="pre">Compute</span></code> button:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="o">.</span><span class="n">addTextField</span><span class="p">(</span><span class="s1">&#39;Number&#39;</span><span class="p">)</span>
+<span class="n">wn</span><span class="o">.</span><span class="n">addTextField</span><span class="p">(</span><span class="s1">&#39;Factorial&#39;</span><span class="p">)</span>
+<span class="n">wn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="s1">&#39;Factorial&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="n">wn</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;Compute&#39;</span><span class="p">,</span> <span class="n">computeBtnClick</span><span class="p">)</span>
+<span class="n">wn</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;Quit&#39;</span><span class="p">,</span> <span class="n">quitBtnClick</span><span class="p">,</span> <span class="n">sameRow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="button-click-functions">
+<h2>Button Click Functions<a class="headerlink" href="#button-click-functions" title="Permalink to this headline">¶</a></h2>
+<p>The second argument to <a class="reference internal" href="functions.html#pcc.gui.window.Window.addButton" title="pcc.gui.window.Window.addButton"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addButton()</span></code></a> should be the name of a function defined like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>When the button is clicked, this function will be called to perform the actions
+defined for that button.</p>
+<p>The argument will be the name of the button that was clicked. This allows you to define one function
+to handle multiple buttons and distinguish which button was clicked via the name.
+Or you can have a separate function for each button.</p>
+</div>
+<div class="section" id="window-size-and-position">
+<h2>Window Size and Position<a class="headerlink" href="#window-size-and-position" title="Permalink to this headline">¶</a></h2>
+<p>You can set the window’s size and its position on the screen with
+<a class="reference internal" href="functions.html#pcc.gui.window.Window.setPosn" title="pcc.gui.window.Window.setPosn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setPosn()</span></code></a> and <a class="reference internal" href="functions.html#pcc.gui.window.Window.setSize" title="pcc.gui.window.Window.setSize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setSize()</span></code></a>.
+If you do not do these, your window will be the right size to contain all of its items,
+and the system will choose where to place the window on the screen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="o">.</span><span class="n">setPosn</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">wn</span><span class="o">.</span><span class="n">setSize</span><span class="p">(</span><span class="mi">260</span><span class="p">,</span>  <span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="opening-and-closing">
+<h2>Opening and Closing<a class="headerlink" href="#opening-and-closing" title="Permalink to this headline">¶</a></h2>
+<p>Once you have added all the items to your window and optionally sized and positioned it,
+you can open the window by calling <a class="reference internal" href="functions.html#pcc.gui.window.Window.open" title="pcc.gui.window.Window.open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To close your window, call <a class="reference internal" href="functions.html#pcc.gui.window.Window.close" title="pcc.gui.window.Window.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="user-interface-item-focus-and-the-return-enter-key">
+<span id="focus-and-return-key"></span><h2>User Interface Item Focus and the Return/Enter Key<a class="headerlink" href="#user-interface-item-focus-and-the-return-enter-key" title="Permalink to this headline">¶</a></h2>
+<p>One of the user interface items in the window will typically have what’s called the “focus.”
+A text field, for instance, will have a blinking vertical cursor in it when it has the focus.
+A button with the focus will have some sort of hiliting.
+Keypresses will be directed to the item that has the focus.</p>
+<p>If a button has the focus, pressing the Enter/Return key should have the same effect as mouse-clicking the button.
+This behavior requires support from <code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> via <a class="reference internal" href="functions.html#pcc.gui.window.Window.focusReturnKey" title="pcc.gui.window.Window.focusReturnKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">focusReturnKey()</span></code></a>, which needs to be called
+from the app’s <code class="docutils literal notranslate"><span class="pre">keypressFn</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keyPress</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;Return&#39;</span><span class="p">:</span>
+        <span class="n">wn</span><span class="o">.</span><span class="n">focusReturnKey</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sample-app">
+<h2>Sample App<a class="headerlink" href="#sample-app" title="Permalink to this headline">¶</a></h2>
+<p>This is what the sample app window looks like.
+Note that the <strong>Compute</strong> button currently has the user interface focus, indicated by the hiliting.</p>
+<img alt="sample app window" src="_images/sample_app.png" />
+<p>Here is the code for the sample app.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pcc.gui</span>
+
+<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">wn</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s1">&#39;Number&#39;</span><span class="p">)</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="s1">&#39;Compute&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">keypress</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;Escape&#39;</span><span class="p">:</span>
+        <span class="n">wn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;Return&#39;</span><span class="p">:</span>
+        <span class="n">wn</span><span class="o">.</span><span class="n">focusReturnKey</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">computeBtnClick</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s1">&#39;Number&#39;</span><span class="p">))</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s1">&#39;Factorial&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">quitBtnClick</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">wn</span>
+    <span class="n">wn</span> <span class="o">=</span> <span class="n">pcc</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">newWindow</span><span class="p">(</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="n">keypress</span><span class="p">,</span> <span class="n">update</span><span class="p">)</span>
+
+    <span class="n">wn</span><span class="o">.</span><span class="n">addTextField</span><span class="p">(</span><span class="s1">&#39;Number&#39;</span><span class="p">)</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">addTextField</span><span class="p">(</span><span class="s1">&#39;Factorial&#39;</span><span class="p">,</span> <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">wn</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;Compute&#39;</span><span class="p">,</span> <span class="n">computeBtnClick</span><span class="p">)</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;Quit&#39;</span><span class="p">,</span> <span class="n">quitBtnClick</span><span class="p">,</span> <span class="n">sameRow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">wn</span><span class="o">.</span><span class="n">setPosn</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">update</span><span class="p">()</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package Tutorial</a><ul>
+<li><a class="reference internal" href="#import-the-pcc-gui-package">Import the <code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package</a></li>
+<li><a class="reference internal" href="#create-a-pcc-gui-window">Create a <code class="docutils literal notranslate"><span class="pre">pcc.gui.Window</span></code></a></li>
+<li><a class="reference internal" href="#window-functions">Window Functions</a></li>
+<li><a class="reference internal" href="#add-window-items">Add Window Items</a></li>
+<li><a class="reference internal" href="#button-click-functions">Button Click Functions</a></li>
+<li><a class="reference internal" href="#window-size-and-position">Window Size and Position</a></li>
+<li><a class="reference internal" href="#opening-and-closing">Opening and Closing</a></li>
+<li><a class="reference internal" href="#user-interface-item-focus-and-the-return-enter-key">User Interface Item Focus and the Return/Enter Key</a></li>
+<li><a class="reference internal" href="#sample-app">Sample App</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Table of Contents</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="functions.html"
+                        title="next chapter"><code class="docutils literal notranslate"><span class="pre">pcc.gui</span></code> Package API</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions.html" title="pcc.gui Package API"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Table of Contents"
+             >previous</a> |</li>
+    <li><img src="_static/pcc_16.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.pcc.edu/">PCC</a> &#187;</li>
+    
+    <a href="index.html">pcc.gui  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html">Copyright</a> 2019, Michael Trigoboff.
+    <br />
+
+    Last updated on May 20, 2019.
+    
+    <br />
+
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.0.1.
+    </div>
+
+  </body>
+</html>

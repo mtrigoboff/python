@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a4218cbd-f387-4a25-a1e9-1ae637d6f205</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>functions.py</StartupFile>
+    <StartupFile>compute_pay.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="bridge_of_death.py" />
+    <Compile Include="compute_pay.py" />
     <Compile Include="dictionary.py" />
     <Compile Include="functions.py" />
     <Compile Include="global.py" />

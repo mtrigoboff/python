@@ -13,8 +13,8 @@ class Animal:
 	def sound(self):
 		raise NotImplementedError(f'{type(self).__name__} does not implement sound()')
 
-	def nFeet(self):
-		raise NotImplementedError(f'{type(self).__name__} does not implement nFeet()')
+	def n_feet(self):
+		raise NotImplementedError(f'{type(self).__name__} does not implement n_feet()')
 	
 	def __str__(self):
 		return 'kingdom:' + Animal.kingdomName
@@ -27,11 +27,11 @@ class Bear(Animal):
 	def sound(self):
 		return 'Growl'
 
-	def nFeet(self):
+	def n_feet(self):
 		return 4
 
 	def __str__(self):
-		return f'species:{self.species()}, sound:{self.sound()}, nFeet:{self.nFeet()}, {super().__str__()}'
+		return f'species:{self.species()}, sound:{self.sound()}, n_feet:{self.n_feet()}, {super().__str__()}'
 	
 class Bird(Animal):
 
@@ -41,11 +41,11 @@ class Bird(Animal):
 	def sound(self):
 		return 'Tweet'
 
-	def nFeet(self):
+	def n_feet(self):
 		return 2
 
 	def __str__(self):
-		return f'species:{self.species()}, sound:{self.sound()}, nFeet:{self.nFeet()}, {super().__str__()}'
+		return f'species:{self.species()}, sound:{self.sound()}, n_feet:{self.n_feet()}, {super().__str__()}'
 
 class Snake(Animal):
 
@@ -56,7 +56,7 @@ class Snake(Animal):
 		return 'Hiss'
 
 	def __str__(self):
-		return f'species:{self.species()}, sound:{self.sound()}, nFeet:{self.nFeet()}, {super().__str__()}'
+		return f'species:{self.species()}, sound:{self.sound()}, n_feet:{self.n_feet()}, {super().__str__()}'
 
 animals = (Bear(), Bird(), Snake(), Animal())
 
@@ -67,9 +67,9 @@ def main():
 		try:
 			species = animal.species()
 			sound = animal.sound()
-			nFeet = animal.nFeet()
+			n_feet = animal.n_feet()
 			kingdom = animal.kingdom()
-			print(f'species:{species}, sound:{sound}, nFeet:{nFeet}, kingdom:{kingdom}')
+			print(f'species:{species}, sound:{sound}, n_feet:{n_feet}, kingdom:{kingdom}')
 			print(f'__str__: {animal}')
 		except NotImplementedError as err:
 			print(f'error: {err}')

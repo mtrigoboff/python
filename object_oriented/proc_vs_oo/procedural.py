@@ -8,7 +8,7 @@ def sound(animal):
 	else:
 		raise TypeError(unknownAnimalStr + animal)
 
-def nFeet(animal):
+def n_feet(animal):
 	if animal == 'Bear':
 		return 4
 	elif animal == 'Bird':
@@ -24,8 +24,8 @@ def main():
 	for animal in animals:
 		try:
 			snd = sound(animal)
-			nFt = nFeet(animal)
-			print(f'species:{animal}, sound:{snd}, nFeet:{nFt}')
+			nFt = n_feet(animal)
+			print(f'species:{animal}, sound:{snd}, n_feet:{nFt}')
 		except TypeError as err:
 			print(f'error: {err}')
 

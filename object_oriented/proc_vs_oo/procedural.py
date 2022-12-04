@@ -1,4 +1,4 @@
-unknownAnimalStr = 'unknown animal '
+unknown_animal_str = 'unknown animal '
 
 def sound(animal):
 	if animal == 'Bear':
@@ -6,7 +6,7 @@ def sound(animal):
 	elif animal == 'Bird':
 		return 'Tweet'
 	else:
-		raise TypeError(unknownAnimalStr + animal)
+		raise TypeError(unknown_animal_str + animal)
 
 def n_feet(animal):
 	if animal == 'Bear':
@@ -14,7 +14,7 @@ def n_feet(animal):
 	elif animal == 'Bird':
 		return 2
 	else:
-		raise TypeError(unknownAnimalStr + animal)
+		raise TypeError(unknown_animal_str + animal)
 
 animals = ('Bear', 'Bird', 'Snake')
 

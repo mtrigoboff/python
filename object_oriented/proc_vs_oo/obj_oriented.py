@@ -1,11 +1,11 @@
 class Animal:
 
 	# class (static) variable
-	kingdomName = 'Animal'
+	_kingdom_name = 'Animal'
 
 	@staticmethod
 	def kingdom():
-		return Animal.kingdomName
+		return Animal._kingdom_name
 
 	def species(self):
 		raise NotImplementedError(f'{type(self).__name__} does not implement species()')
@@ -17,7 +17,7 @@ class Animal:
 		raise NotImplementedError(f'{type(self).__name__} does not implement n_feet()')
 	
 	def __str__(self):
-		return 'kingdom:' + Animal.kingdomName
+		return 'kingdom:' + Animal._kingdom_name
 
 class Bear(Animal):
 	

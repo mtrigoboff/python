@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>168c674a-75e6-4cf5-9acd-3f7ad2cfb1ef</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>proc_vs_oo\procedural.py</StartupFile>
+    <StartupFile>proc_vs_oo\obj_oriented.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

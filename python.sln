@@ -11,8 +11,6 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "miscellaneous", "miscellane
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "object_oriented", "object_oriented\object_oriented.pyproj", "{168C674A-75E6-4CF5-9ACD-3F7AD2CFB1EF}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "aaa_temp", "aaa_temp\aaa_temp.pyproj", "{E11593EE-2A33-4697-BC2B-AE03DA030E4E}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "sqlite3", "sqlite3\sqlite3.pyproj", "{84E73AD7-935E-4FEF-80A2-8A3F05DC8CAA}"
 EndProject
 Global
@@ -29,8 +27,6 @@ Global
 		{CBBEA547-C05B-4916-BF70-C615BBAF7F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168C674A-75E6-4CF5-9ACD-3F7AD2CFB1EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{168C674A-75E6-4CF5-9ACD-3F7AD2CFB1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E11593EE-2A33-4697-BC2B-AE03DA030E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E11593EE-2A33-4697-BC2B-AE03DA030E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84E73AD7-935E-4FEF-80A2-8A3F05DC8CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84E73AD7-935E-4FEF-80A2-8A3F05DC8CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection

@@ -12,7 +12,7 @@ class Solution(object):
 		i = 0
 		while i < len(s) - 1:
 			try:
-				val += self.digit_pairs[s[i:i + 2]]
+				val += self.digit_pairs[s[i:i+2]]
 				i += 2
 			except KeyError:
 				val += self.digit_vals[s[i]]

@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>84e73ad7-935e-4fef-80a2-8a3f05dc8caa</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sqlite3_app\gui.py</StartupFile>
+    <StartupFile>sqlite3_demo\sqlite3_demo.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

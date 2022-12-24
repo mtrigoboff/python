@@ -5,7 +5,7 @@
     <ProjectGuid>3e6b8583-49b5-4e86-8908-3697f5ceed99</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>coord_click.py</StartupFile>
+    <StartupFile>tree.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

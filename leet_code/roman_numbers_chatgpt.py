@@ -19,3 +19,7 @@ def roman_to_integer(roman_numeral: str) -> int:
             result -= roman_numerals[c]
 
     return result
+
+tests = ('III', 'IV', 'I', 'V', 'LVIII', 'MCMXCIV', 'XIV')
+for test in tests:
+	print(f'{test}: {roman_to_integer(test)}')

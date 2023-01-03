@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a4218cbd-f387-4a25-a1e9-1ae637d6f205</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>factorial.py</StartupFile>
+    <StartupFile>try_catch.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -38,6 +38,9 @@
     <Compile Include="pdb_demo.py" />
     <Compile Include="recursion.py" />
     <Compile Include="slicing.py" />
+    <Compile Include="try_catch.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

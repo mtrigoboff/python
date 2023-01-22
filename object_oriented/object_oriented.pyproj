@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>168c674a-75e6-4cf5-9acd-3f7ad2cfb1ef</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>mcburgers.py</StartupFile>
+    <StartupFile>intro\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="cmd_line_ui_class.py" />
+    <Compile Include="intro\animal.py" />
+    <Compile Include="intro\bird.py" />
+    <Compile Include="intro\fish.py" />
+    <Compile Include="intro\main.py" />
     <Compile Include="mcburgers.py" />
     <Compile Include="motif2text\motif2text.py" />
     <Compile Include="proc_vs_oo\obj_oriented.py" />
@@ -33,11 +37,17 @@
     <Compile Include="tic_tac_toe\tic_tac_toe_turtle.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="intro\intro.pyproj" />
+    <Content Include="intro\__pycache__\animal.cpython-311.pyc" />
+    <Content Include="intro\__pycache__\bird.cpython-311.pyc" />
+    <Content Include="intro\__pycache__\fish.cpython-311.pyc" />
     <Content Include="motif2text\motif2text.ini" />
     <Content Include="motif2text\motif2textHelp.pdf" />
     <Content Include="motif2text\motif2text_test" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="intro\" />
+    <Folder Include="intro\__pycache__\" />
     <Folder Include="motif2text\" />
     <Folder Include="proc_vs_oo\" />
     <Folder Include="tic_tac_toe\" />

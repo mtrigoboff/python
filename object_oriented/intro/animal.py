@@ -1,7 +1,7 @@
 class Animal:
 
 	# used for implementing a unique id number for each instance
-	instance_id = 0		# class variable
+	instance_id = 0								# class variable
 
 	def __init__(self, kind, skin_type):
 		self.kind = kind

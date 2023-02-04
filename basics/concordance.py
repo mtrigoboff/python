@@ -1,6 +1,6 @@
 words = {}
 
-text_file = open('constitution.txt', 'r')
+text_file = open('basics/constitution.txt', 'r')
 lines = text_file.readlines()
 text_file.close()
 

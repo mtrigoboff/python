@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk		# 'improved' tkinter widgets
 
-from pcc.gui.items.item import Item
+from mlt.gui.items.item import Item
 
 class TextField(Item):
 

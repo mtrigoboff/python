@@ -1,4 +1,4 @@
-import db, pcc.gui, os, sys
+import db, mlt.gui, os, sys
 from os.path import join
 
 def update():
@@ -37,7 +37,7 @@ def btnClick(name):
 
 def run(fileName):
 	global nStudents, studentIndex, students, wn
-	wn = pcc.gui.window.newWindow('Students', keypress, update)
+	wn = mlt.gui.window.newWindow('Students', keypress, update)
 
 	wn.addTextField('Name', enabled=False)
 	wn.addTextField('Credits', enabled=False)
@@ -64,4 +64,5 @@ def run(fileName):
 if len(sys.argv) == 2:
 	run(sys.argv[1])
 else:
-	run(os.path.join('sqlite3_app', 'students.sqlite'))
+	file_path = os.path.join('sqlite3', 'sqlite3_app', 'students.sqlite')
+	run(file_path)

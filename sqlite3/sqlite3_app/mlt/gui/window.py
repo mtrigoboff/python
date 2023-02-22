@@ -3,10 +3,10 @@ import os.path, sys
 import tkinter as tk
 from tkinter import ttk		# 'improved' tkinter widgets
 
-from pcc.gui.items.button import Button
-from pcc.gui.items.textfield import TextField
-from pcc.gui.items.nosuchitemerror import NoSuchItemError
-from pcc.gui.items.automate import automate
+from mlt.gui.items.button import Button
+from mlt.gui.items.textfield import TextField
+from mlt.gui.items.nosuchitemerror import NoSuchItemError
+from mlt.gui.items.automate import automate
 
 def newWindow(name, keypressFn=None, updateFn=None):
 	"""
@@ -19,7 +19,7 @@ def newWindow(name, keypressFn=None, updateFn=None):
 	:type keypressFn: Python function
 	:param updateFn: updates the user interface state (see :ref:`wn_functions`)
 	:type updateFn: Python function
-	:return: ``pcc.gui.Window`` instance
+	:return: ``mlt.gui.Window`` instance
 	"""
 	return Window(name, keypressFn, updateFn)
 

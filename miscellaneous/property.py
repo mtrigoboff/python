@@ -1,17 +1,17 @@
 class Battery:
     def __init__(self, volts):
-        self.volts = volts
+        self.volts = volts				# calls setter
 
     @property
-    def volts(self):
+    def volts(self):					# getter
         return self._volts
     
-    @volts.setter
+    @volts.setter						# setter
     def volts(self, volts):
         self._volts = volts
     
     def __str__(self):
-        return f'{self.volts} volts'
+        return f'{self.volts} volts'	# calls getter
 
 b = Battery(9)
 print(b)

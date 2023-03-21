@@ -20,8 +20,8 @@ def fn_k(a, b, **kwargs):
 print('kwargs')
 fn_k(1, 2)
 fn_k(1, 2, x=5, y=6)
-
 print()
+
 def fn_ak(a, b, *args, **kwargs):
 	print(a, b, end=' ')
 	if len(args) > 0:

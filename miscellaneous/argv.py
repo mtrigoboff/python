@@ -1,6 +1,7 @@
 from sys import argv
 
-argv = [1, 2, 3, 4]
+# can override argv by doint this:
+# argv = [<whatever you want>]
 
 print(argv)
 

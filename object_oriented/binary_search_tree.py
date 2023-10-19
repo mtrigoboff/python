@@ -31,19 +31,18 @@ class BinarySearchTree:
 			else:
 				self.add_node_r(parent._right, data)
 
-	def print_tree(node):
-		global tree_str
+	def print_tree(node, node_list):
 		if node._left is not None:
-			BinarySearchTree.print_tree(node._left)
-		tree_str += node._data
+			BinarySearchTree.print_tree(node._left, node_list)
+		node_list += node._data
 		if node._right is not None:
-			BinarySearchTree.print_tree(node._right)
-		return tree_str
+			BinarySearchTree.print_tree(node._right, node_list)
 
 	def __str__(self):
-		global tree_str
-		tree_str = ''
-		return BinarySearchTree.print_tree(self._tree)
+		# strings are immutable, so need to use list
+		node_list = []
+		BinarySearchTree.print_tree(self._tree, node_list)
+		return ', '.join(node_list)
 
 tree = BinarySearchTree()
 tree.add_node('M')

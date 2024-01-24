@@ -2,21 +2,36 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "redirect_stdio.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"args": ["miscellaneous\\redirect_stdio", "input.txt", "output.txt"],
+			"console": "integratedTerminal",
+			"justMyCode": true
+		},
+		{
 			"name": "Python: Current File",
 			"type": "python",
 			"request": "launch",
 			"program": "${file}",
 			"console": "integratedTerminal",
+
 			"justMyCode": true
-		},
-		{
-			"name": "Python: Current File + args",
-			"type": "python",
-			"request": "launch",
-			"program": "${file}",
-			"console": "integratedTerminal",
-			"justMyCode": true,
-			"args": ["a", "b", "c"]
-		},
+		}
+		// "args": ["python\\miscellaneous\\redirect_stdio", "input.txt", "output.txt"],
+		// {
+		// 	"name": "Python: Current File + args",
+		// 	"type": "python",
+		// 	"request": "launch",
+		// 	"program": "${file}",
+		// 	"console": "integratedTerminal",
+		// 	"justMyCode": true,
+		// 	"args": [
+		// 		"a",
+		// 		"b",
+		// 		"c"
+		// 	]
+		// },
 	]
 }

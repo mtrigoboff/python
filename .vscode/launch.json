@@ -16,7 +16,6 @@
 			"request": "launch",
 			"program": "${file}",
 			"console": "integratedTerminal",
-
 			"justMyCode": true
 		}
 		// "args": ["python\\miscellaneous\\redirect_stdio", "input.txt", "output.txt"],

@@ -1,14 +1,6 @@
 import copy, sys
 from tic_tac_toe_game import Game
 
-def print_play_keys():                              # print chart of play keys
-    print('keys for moves')
-    print(' 7 | 8 | 9 ')
-    print('---+---+---')
-    print(' 4 | 5 | 6 ')
-    print('---+---+---')
-    print(' 1 | 2 | 3 ')
-
 def get_move(game):                                 # get next move for X from user
     while True:
         move = int(input('# '))
@@ -19,7 +11,7 @@ def get_move(game):                                 # get next move for X from u
 
 def run():
     game = Game()
-    print_play_keys()                               # display how to specify moves as numbers
+    game.board.print_play_keys()                               # display how to specify moves as numbers
     print()
     while True:
         game.print()

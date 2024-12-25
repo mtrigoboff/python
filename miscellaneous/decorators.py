@@ -1,7 +1,7 @@
 def safe_divide(fn):
 	def dec(num, den):
 		if den == 0:
-			raise ValueError('0 divide!')
+			raise ValueError('zero divide!')
 		return fn(num, den)
 	return dec
 

@@ -1,7 +1,7 @@
 class Battery:
     def __init__(self, volts):
         self.volts = volts				# calls setter
-
+										# (does NOT use _volts)
     @property
     def volts(self):					# getter
         return self._volts
@@ -16,6 +16,6 @@ class Battery:
 b = Battery(9)
 print(b)
 v = b.volts
-print(v)
+print(v, 'volts')
 b.volts = 1.5
 print(b)

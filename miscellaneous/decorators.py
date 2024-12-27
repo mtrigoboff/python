@@ -1,9 +1,9 @@
 def safe_divide(fn):
-	def dec(num, den):
+	def decorator_fn(num, den):
 		if den == 0:
 			raise ValueError('zero divide!')
 		return fn(num, den)
-	return dec
+	return decorator_fn
 
 @safe_divide
 def divide(num, den):

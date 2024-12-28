@@ -15,7 +15,7 @@ class Battery:
 
 b = Battery(9)
 print(b)
-v = b.volts
+v = b.volts								# calls getter
 print(v, 'volts')
-b.volts = 1.5
+b.volts = 1.5							# calls setter
 print(b)

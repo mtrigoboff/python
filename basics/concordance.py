@@ -1,14 +1,14 @@
 words = {}
 
-text_file = open('basics/constitution.txt', 'r')
+text_file = open('basics\\constitution.txt', 'r')
 lines = text_file.readlines()
 text_file.close()
 
 for line in lines:
     for word in line.split():
-        try:
+        if word in words:
             words[word] += 1
-        except KeyError:
+        else:
             words[word] = 1
 
 for key, value in sorted(words.items()):

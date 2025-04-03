@@ -3,7 +3,7 @@
 	"configurations": [
 		{
 			"name": "redirect_stdio.py",
-			"type": "python",
+			"type": "debugpy",
 			"request": "launch",
 			"program": "${file}",
 			"args": ["miscellaneous\\redirect_stdio", "input.txt", "output.txt"],
@@ -12,25 +12,11 @@
 		},
 		{
 			"name": "Python: Current File",
-			"type": "python",
+			"type": "debugpy",
 			"request": "launch",
 			"program": "${file}",
 			"console": "integratedTerminal",
 			"justMyCode": true
 		}
-		// "args": ["python\\miscellaneous\\redirect_stdio", "input.txt", "output.txt"],
-		// {
-		// 	"name": "Python: Current File + args",
-		// 	"type": "python",
-		// 	"request": "launch",
-		// 	"program": "${file}",
-		// 	"console": "integratedTerminal",
-		// 	"justMyCode": true,
-		// 	"args": [
-		// 		"a",
-		// 		"b",
-		// 		"c"
-		// 	]
-		// },
 	]
 }

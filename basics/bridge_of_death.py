@@ -17,18 +17,18 @@ quest =	input('What is your quest? ')
 
 # choices
 rand_num = r.random()	# returns a random float between 0 and 1
-if rand_num < .33:
+if 0.0 <= rand_num < .33:
     # read color from the user
     answer3 = input('What is your favorite color? ')
     print('\nRight! Off you go!')
-elif rand_num >= .33 and rand_num < .67:
+elif 0.33 <= rand_num < 0.67:
     # read capital from the user+
     answer3 = input('What is the capital of Assyria? ')
     if answer3.lower() == 'assur':
         print('\nRight! Off you go!')
     else:
         print('\nAaargh!')
-else:
+else: # 0.67 <= rand_num <= 1.0
     # read airspeed from the user
     answer3 = input('What is the airspeed velocity of an unladen swallow? ')
     if answer3.lower() == 'african or european?':

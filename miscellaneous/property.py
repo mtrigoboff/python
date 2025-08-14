@@ -19,3 +19,17 @@ v = b.volts								# calls getter
 print(v, 'volts')
 b.volts = 1.5							# calls setter
 print(b)
+
+# errors
+try:
+	a = b.amperes						# no such property
+except AttributeError as ae:
+     print(f'{ae}')
+
+# property name as string
+b.volts = 1.75
+volt_property_name = 'volts'
+v = eval(f'b.{volt_property_name}')
+print(v, 'volts')
+
+pass

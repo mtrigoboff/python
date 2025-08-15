@@ -1,3 +1,7 @@
+# demo that a list can function as a boolean:
+# empty list -> false
+# non empty list -> true
+
 empty = []
 not_empty = [1, 2, 3]
 

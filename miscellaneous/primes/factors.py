@@ -6,7 +6,7 @@ def factors(n):
 	sqrt_n = math.sqrt(n)
 	print(f'square root of {n}: {sqrt_n:.2f}')
 	tsqrt_n = int(sqrt_n)						# truncated square root
-	for i in range(2, int(tsqrt_n) + 1):		# +1 to include sqrt_n
+	for i in range(2, tsqrt_n + 1):				# +1 to include sqrt_n
 		if n % i == 0:
 			prime = False
 			print(f'factor pair: {i} and {n // i}')

@@ -21,7 +21,7 @@ def setup():
 # lawn parameters
 lawnColor = 'light green'
 lawnHeight = 100
-lawnTweak = 10                          # needed cover entire window width
+lawnTweak = 10                          # needed to cover entire window width
 
 def drawLawn():
 	t.color(lawnColor)

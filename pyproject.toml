@@ -1,0 +1,8 @@
+[tool.ruff.format]
+indent-style = "tab"
+indent-width = 4
+
+[tool.ruff.lint]
+# W191 checks for indentation that uses tabs. 
+# We ignore it because we are intentionally using tabs.
+ignore = ["W191"]
